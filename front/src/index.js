@@ -1,13 +1,15 @@
-import './_fonts';
-import './_common.sass';
-import './_normalize';
+import 'sass/styles';
+
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import(/* webpackChunkName: 'app' */ './app/App')
   .then(({ default: App }) => 
     render(
-      <App />, 
+      <Router>
+        <App />
+      </Router>, 
       document.getElementById('app')
     )
   );
