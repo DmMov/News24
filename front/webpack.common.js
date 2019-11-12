@@ -63,10 +63,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template:'./src/index.html'
+      template:'src/index.html',
+      favicon: 'src/favicon.ico'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     }),
     new ImageminPlugin({
       test: /\.(png|jpe?g|gif|svg)$/
