@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as RouterLink, Route } from 'react-router-dom';
 import cx from 'classnames';
 
-export const Link = ({ to, exact, label }) => (
+const Link = ({ to, exact, label }) => (
   <Route
     path={to}
     exact={exact}
@@ -15,3 +15,5 @@ export const Link = ({ to, exact, label }) => (
     )}
   />
 );
+
+export default Link;

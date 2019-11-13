@@ -1,6 +1,6 @@
 import React from 'react';
 import { NAVIGATION_LINKS } from 'const';
-import { Link } from 'app/common/Link';
+import Link from 'app/common/Link';
 
 import './NavigationMenu.sass';
 
