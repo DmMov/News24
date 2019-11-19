@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.sass';
 import SiteHeader from './site-header/SiteHeader';
-import SiteSlider from './site-slider/SiteSlider';
+import SiteSliderContainer from './site-slider/SiteSlider.Container';
 
 const App = () => <>
   <SiteHeader />
-  <SiteSlider />
+  <SiteSliderContainer />
 </>;
 
 export default App;

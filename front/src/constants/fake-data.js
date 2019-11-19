@@ -42,7 +42,6 @@ export const TAGS_TO_NEWS = [];
 export const NEWS = [
   {
     id: '1',
-    index: 0,
     title: 'Ілон Маск анонсував будівництво Gigafactory 4 у Європі',
     img: img_one,
     author: 'news24',
@@ -52,7 +51,6 @@ export const NEWS = [
   }, 
   {
     id: '2',
-    index: 1,
     title: 'SpaceX запустила у космос 60 супутників',
     img: img_two,
     author: 'news24',
