@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from 'app/common/Link';
-import { TAGS } from 'constants/fake-data';
 
 import './TagsMenu.sass';
+import TagsPopUp from './tags-pop-up/TagsPopUp';
 
-const TagsMenu = () =>
-  <nav id="tags-menu">
+const TagsMenu = ({ tags, reference, tagsToPopUp }) =>
+  <nav id="tags-menu" ref={reference}>
     <ul className="links-wrap">
-      { TAGS.map(({ id, title }) => <Link key={id} to={`/${title}`} label={title} />) }
+      { tags.map(({ id, title }) => <Link key={id} to={`/${title}`} label={title} />) }
+      <TagsPopUp tagsToPopUp={tagsToPopUp}/>
     </ul>
   </nav>
 
