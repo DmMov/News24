@@ -11,21 +11,30 @@ const TagsMenuContainer = () => {
 
   let allTagsWidth = [];
 
-  const isFitting = element => {
+  let iteration = 1;
+  const isFitChecking = element => {
     let tagsWidth = 0;
-    let elementLiChildren = [];
-    for (let i = 0; i < element.children.length; i++) {
+    let isFit = true;
+    for (let i = 0; i < element.children.length; i++)
       tagsWidth = tagsWidth + element.children[i].offsetWidth;
-      elementLiChildren = element.children[i].localName == 'li' ? [...elementLiChildren, element.children[i]] : elementLiChildren;
-    }
-
-    if (element.offsetWidth - 20 < tagsWidth) {
-      setTagsToMenu(v => v.filter((t, i) => i != v.length - 1));
+    setTagsToMenu(v => {
+      if (element.offsetWidth - 20 < tagsWidth) {
+        isFit = false;
+        return v.filter((t, i) => i != v.length - 1);
+      }
+      if (element.offsetWidth - 20 > tagsWidth + allTagsWidth[v.length]) {
+        isFit = false;
+        if (typeof(tags[v.length]) != 'undefined')
+          return [...v, tags[v.length]];
+      }
+      isFit = true;
+      return v;
+    });
+    if (isFit) {
       return;
     }
-    if (element.offsetWidth - 20 > tagsWidth + allTagsWidth[elementLiChildren.length]) {
-      setTagsToMenu(v => typeof(tags[v.length]) != 'undefined' ? [...v, tags[v.length]] : v)
-      return;
+    else {
+      isFitChecking(ref.current.children[0]);
     }
   }
   
@@ -33,10 +42,7 @@ const TagsMenuContainer = () => {
     const currentChildren = ref.current.children[0].children;
     for (let i = 0; i < currentChildren.length; i++)
       allTagsWidth = [...allTagsWidth, currentChildren[i].offsetWidth];
-
-    isFitting(ref.current.children[0]);
-
-    new ResizeSensor(ref.current, () => isFitting(ref.current.children[0]));
+    new ResizeSensor(ref.current, () => isFitChecking(ref.current.children[0]));
   }, [ref]);
 
   return <TagsMenu tags={tagsToMenu} tagsToPopUp={tags.filter(v => !tagsToMenu.includes(v))} reference={ref} />
