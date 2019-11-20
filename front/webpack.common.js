@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -71,6 +72,9 @@ module.exports = {
     }),
     new ImageminPlugin({
       test: /\.(png|jpe?g|gif|svg)$/
+    }),
+    new MomentLocalesPlugin({
+      localesToKeep: ['uk-ua']
     })
   ]
 }

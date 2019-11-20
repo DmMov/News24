@@ -1,6 +1,8 @@
 import img_one from 'img/1-74.jpg';
 import img_two from 'img/spaceX.jpg';
 
+import moment from 'moment';
+
 export const TAGS = [
   {
     id: '1',
@@ -47,7 +49,7 @@ export const NEWS = [
     img: img_one,
     author: 'news24',
     tag: 'наука',
-    createdAt: Date.now().toString(),
+    createdAt: moment().locale('uk-ua').format('llll').toString(),
     views: 1400,
     featured: true
   }, 
@@ -58,7 +60,7 @@ export const NEWS = [
     img: img_two,
     author: 'news24',
     tag: 'світ',
-    createdAt: Date.now().toString(),
+    createdAt: moment().locale('uk-ua').format('llll').toString(),
     views: 2100,
     featured: true
   }

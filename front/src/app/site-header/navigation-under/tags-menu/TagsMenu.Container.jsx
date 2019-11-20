@@ -11,7 +11,6 @@ const TagsMenuContainer = () => {
 
   let allTagsWidth = [];
 
-  let iteration = 1;
   const isFitChecking = element => {
     let tagsWidth = 0;
     let isFit = true;
@@ -30,12 +29,10 @@ const TagsMenuContainer = () => {
       isFit = true;
       return v;
     });
-    if (isFit) {
+    if (isFit)
       return;
-    }
-    else {
+    else
       isFitChecking(ref.current.children[0]);
-    }
   }
   
   useEffect(() => {
