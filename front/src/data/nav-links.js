@@ -1,4 +1,4 @@
-export const NAVIGATION_LINKS = [
+export const NAV_LINKS = [
   {
     exact: true,
     label: 'головна',
@@ -9,7 +9,7 @@ export const NAVIGATION_LINKS = [
     to: '/about'
   },
   {
-    label: 'контакти',
+    label: 'зв\'язатися',
     to: '/contact'
   }
 ]

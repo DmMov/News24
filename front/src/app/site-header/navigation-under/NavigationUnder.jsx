@@ -2,7 +2,7 @@ import React from 'react';
 import SiteLogo from './site-logo/SiteLogo';
 import AlignSectionBox from 'app/align-section-box/AlignSectionBox';
 import { Search } from '@material-ui/icons';
-import TagsMenuContainer from './tags-menu/TagsMenu.Container';
+import CategoriesMenuContainer from './categories-menu/CategoriesMenu.Container';
 
 import './NavigationUnder.sass';
 
@@ -11,7 +11,7 @@ const NavigationUnder = () =>
     <AlignSectionBox>
       <div className="nu-content-wrap">
         <SiteLogo />
-        <TagsMenuContainer />
+        <CategoriesMenuContainer />
         <Search className="search-icon" />
       </div>
     </AlignSectionBox>

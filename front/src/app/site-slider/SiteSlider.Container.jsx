@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SiteSlider from './SiteSlider';
-import { NEWS } from 'const';
+import { NEWS } from 'data-export';
 
 const SiteSliderContainer = () => {
   const [slideIndex, setSlideIndex] = useState(0);

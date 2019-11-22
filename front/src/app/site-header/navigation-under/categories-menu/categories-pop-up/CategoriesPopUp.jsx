@@ -2,25 +2,25 @@ import React from 'react';
 import { MoreHorizOutlined } from '@material-ui/icons';
 import Link from 'app/common/Link';
 
-import './TagsPopUp.sass';
+import './CategoriesPopUp.sass';
 
-const TagsPopUp = ({ tagsToPopUp }) =>
-  tagsToPopUp.length != 0 &&
-  <div id="tags-pop-up">
+const CategoriesPopUp = ({ categoriesToPopUp }) =>
+  categoriesToPopUp.length != 0 &&
+  <div id="categories-pop-up">
     <button className="pop-up-btn">
       <MoreHorizOutlined className="dots-icon" />
     </button>
     <nav className="pop-up">
       <ul className="links-wrap">
         {
-          tagsToPopUp.map(({ id, title }) => <Link key={id} to={`/${title}`} label={title} />)
+          categoriesToPopUp.map(({ id, title }) => <Link key={id} to={`/${title}`} label={title} />)
         }
       </ul>
     </nav>
   </div>
 
-TagsPopUp.defaultProps = {
-  tagsToPopUp: []
+CategoriesPopUp.defaultProps = {
+  categoriesToPopUp: []
 }
 
-export default TagsPopUp;
+export default CategoriesPopUp;
