@@ -13,7 +13,7 @@ const CategoriesPopUp = ({ categoriesToPopUp }) =>
     <nav className="pop-up">
       <ul className="links-wrap">
         {
-          categoriesToPopUp.map(({ id, title }) => <Link key={id} to={`/${title}`} label={title} />)
+          categoriesToPopUp.map(({ id, title }) => <Link key={id} to={`/${title.en}`} label={title.ua} />)
         }
       </ul>
     </nav>

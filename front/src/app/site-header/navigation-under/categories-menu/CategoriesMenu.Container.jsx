@@ -12,27 +12,20 @@ const CategoriesMenuContainer = () => {
   let allCategoriesWidth = [];
 
   const isFitChecking = element => {
-    let categoriesWidth = 0;
-    let isFit = true;
-    for (let i = 0; i < element.children.length; i++)
-      categoriesWidth = categoriesWidth + element.children[i].offsetWidth;
+    const elementChildren = Array.from(element.children); 
+    let categoriesWidth = elementChildren.reduce((a, b) => a + b.offsetWidth, 0);
+    let isFit = false;
     setCategoriesToMenu(v => {
-      if (element.offsetWidth - 20 < categoriesWidth) {
-        isFit = false;
+      if (element.offsetWidth - 20 < categoriesWidth) 
         return v.filter((t, i) => i != v.length - 1);
-      }
-      if (element.offsetWidth - 20 > categoriesWidth + allCategoriesWidth[v.length]) {
-        isFit = false;
+      if (element.offsetWidth - 20 > categoriesWidth + allCategoriesWidth[v.length])
         if (typeof(categories[v.length]) != 'undefined')
-          return [...v, categories[v.length]];
-      }
+          return v.concat([categories[v.length]]);
       isFit = true;
       return v;
     });
-    if (isFit)
-      return;
-    else
-      isFitChecking(ref.current.children[0]);
+    if (!isFit)
+      isFitChecking(element);
   }
   
   useEffect(() => {
@@ -40,7 +33,7 @@ const CategoriesMenuContainer = () => {
     for (let i = 0; i < currentChildren.length; i++)
       allCategoriesWidth = [...allCategoriesWidth, currentChildren[i].offsetWidth];
     new ResizeSensor(ref.current, () => isFitChecking(ref.current.children[0]));
-  }, [ref]);
+  }, []);
 
   return <CategoriesMenu categories={categoriesToMenu} categoriesToPopUp={categories.filter(v => !categoriesToMenu.includes(v))} reference={ref} />
 };
