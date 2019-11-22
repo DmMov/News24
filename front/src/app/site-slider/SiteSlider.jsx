@@ -1,10 +1,11 @@
 import React from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Slide from './slide/Slide';
 
 import './SiteSlider.sass';
-import Slide from './slide/Slide';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Dots from '../dots/Dots';
 
-const SiteSlider = ({ slide }) =>
+const SiteSlider = ({ slide, index, dots, jumpTo }) =>
   <div id="site-slider">
     <TransitionGroup className="slide-wrap">
       <CSSTransition
@@ -13,9 +14,10 @@ const SiteSlider = ({ slide }) =>
         timeout={500}
         classNames="fade"
       >
-        <Slide {...slide} />
+        <Slide slide={slide} index={index} />
       </CSSTransition>
     </TransitionGroup>
+    <Dots dots={dots} jumpTo={jumpTo} activeIndex={index} />
   </div>
 
 export default SiteSlider;
