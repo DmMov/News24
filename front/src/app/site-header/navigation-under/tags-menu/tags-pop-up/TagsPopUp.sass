@@ -1,20 +1,21 @@
 #tags-pop-up
   align-self: center
   position: relative
+  &:hover .pop-up
+    display: block
   .pop-up-btn
-    padding: 0 1rem
+    padding: 1rem
     .dots-icon
       font-size: 2rem
       transform: translateY(3px)
-    &:focus ~ .pop-up
-      display: block
   .pop-up
     display: none
     position: absolute
     top: 0
     right: 0
-    transform: translateY(50px)
-    z-index: 1
+    transform: translateY(60px)
+    z-index: 10
+    transition: all .5s lenear .15s
     .links-wrap
       display: grid
       .link-wrap
