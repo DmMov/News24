@@ -1,18 +1,18 @@
 import React from 'react';
-import AlignSectionBox from 'app/align-section-box/AlignSectionBox';
+import ASBox from 'app/common/as-box/ASBox';
 import NavigationMenu from './navigation-menu/NavigationMenu';
+import AuthBtns from './auth-status-panel/auth-btns/AuthBtns';
 
 import './NavigationOver.sass';
-import AuthBtns from './auth-status-panel/auth-btns/AuthBtns';
 
 const NavigationOver = () =>
   <section id="navigation-over">
-    <AlignSectionBox>
+    <ASBox>
       <div className="no-content-wrap">
         <NavigationMenu />
         <AuthBtns />
       </div>
-    </AlignSectionBox>
+    </ASBox>
   </section>
 
 export default NavigationOver;

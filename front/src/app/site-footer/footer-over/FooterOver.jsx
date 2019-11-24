@@ -1,11 +1,8 @@
 import React from 'react';
 
-const FooterOver = () => {
-  return (
-    <div>
-      
-    </div>
-  );
-};
+const FooterOver = () =>
+  <div id="footer-over">
+    <img src={img} />
+  </div>
 
 export default FooterOver;

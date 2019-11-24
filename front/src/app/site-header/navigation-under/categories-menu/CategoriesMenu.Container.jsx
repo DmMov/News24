@@ -24,8 +24,8 @@ const CategoriesMenuContainer = () => {
       isFit = true;
       return v;
     });
-    if (!isFit)
-      isFitChecking(element);
+    // if (!isFit)
+    //   isFitChecking(element);
   }
   
   useEffect(() => {

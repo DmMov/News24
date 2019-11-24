@@ -1,5 +1,5 @@
 import React from 'react';
-import AlignSectionBox from 'app/align-section-box/AlignSectionBox';
+import ASBox from 'app/common/as-box/ASBox';
 import FooterNav from './footer-nav/FooterNav';
 import { Copyright } from '@material-ui/icons';
 import moment from 'moment';
@@ -8,7 +8,7 @@ import './FooterUnder.sass';
 
 const FooterUnder = () =>
   <div id="footer-under">
-    <AlignSectionBox>
+    <ASBox>
       <div className="fu-content-box">
         <div className="copyright-box">
           <Copyright className="copy-icon" />
@@ -17,7 +17,7 @@ const FooterUnder = () =>
         </div>
         <FooterNav />
       </div>
-    </AlignSectionBox>
+    </ASBox>
   </div>
 
 export default FooterUnder;

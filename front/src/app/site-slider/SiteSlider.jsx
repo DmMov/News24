@@ -1,9 +1,9 @@
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Slide from './slide/Slide';
+import Dots from 'app/common/dots/Dots';
 
 import './SiteSlider.sass';
-import Dots from '../dots/Dots';
 
 const SiteSlider = ({ slide, index, dots, jumpTo }) =>
   <div id="site-slider">

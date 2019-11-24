@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'app/common/Link';
 
-import './categoriesMenu.sass';
+import './CategoriesMenu.sass';
 import CategoriesPopUp from './categories-pop-up/CategoriesPopUp';
 
 const CategoriesMenu = ({ categories, reference, categoriesToPopUp }) =>
