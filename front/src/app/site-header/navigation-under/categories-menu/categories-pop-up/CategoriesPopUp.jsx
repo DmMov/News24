@@ -3,6 +3,7 @@ import { MoreHorizOutlined } from '@material-ui/icons';
 import Link from 'app/common/Link';
 
 import './CategoriesPopUp.sass';
+import { array } from 'prop-types';
 
 const CategoriesPopUp = ({ categoriesToPopUp }) =>
   categoriesToPopUp.length != 0 &&
@@ -21,6 +22,10 @@ const CategoriesPopUp = ({ categoriesToPopUp }) =>
 
 CategoriesPopUp.defaultProps = {
   categoriesToPopUp: []
+}
+
+CategoriesPopUp.propTypes = {
+  categoriesToPopUp: array
 }
 
 export default CategoriesPopUp;

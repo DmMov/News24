@@ -4,6 +4,7 @@ import Slide from './slide/Slide';
 import Dots from 'app/common/dots/Dots';
 
 import './SiteSlider.sass';
+import { object, number, array } from 'prop-types';
 
 const SiteSlider = ({ slide, index, dots, jumpTo }) =>
   <div id="site-slider">
@@ -19,5 +20,12 @@ const SiteSlider = ({ slide, index, dots, jumpTo }) =>
     </TransitionGroup>
     <Dots dots={dots} jumpTo={jumpTo} activeIndex={index} />
   </div>
+
+SiteSlider.propTypes = {
+  slide: object,
+  index: number,
+  dots: array,
+  jumpTo: object
+}
 
 export default SiteSlider;

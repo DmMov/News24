@@ -3,6 +3,7 @@ import Link from 'app/common/Link';
 
 import './CategoriesMenu.sass';
 import CategoriesPopUp from './categories-pop-up/CategoriesPopUp';
+import { array, object } from 'prop-types';
 
 const CategoriesMenu = ({ categories, reference, categoriesToPopUp }) =>
   <nav id="categories-menu" ref={reference}>
@@ -11,5 +12,11 @@ const CategoriesMenu = ({ categories, reference, categoriesToPopUp }) =>
       <CategoriesPopUp categoriesToPopUp={categoriesToPopUp}/>
     </ul>
   </nav>
+
+CategoriesMenu.propTypes = {
+  categories: array,
+  reference: object,
+  categoriesToPopUp: array
+}
 
 export default CategoriesMenu;

@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLogo from '../../common/site-logo/SiteLogo';
+import SiteLogo from 'app/common/site-logo/SiteLogo';
 import ASBox from 'app/common/as-box/ASBox';
 import { Search } from '@material-ui/icons';
 import CategoriesMenuContainer from './categories-menu/CategoriesMenu.Container';
