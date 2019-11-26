@@ -4,7 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import(/* webpackChunkName: 'app' */ './app/App')
+import(/* webpackChunkName: 'app' */ 'components/App')
   .then(({ default: App }) => 
     render(
       <Router>
