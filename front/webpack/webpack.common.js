@@ -18,7 +18,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules/', 'src/'], 
-    extensions: [ '.js', '.jsx', '.json', '.jpg', '.css', '.scss', '.sass' ]
+    extensions: [ '.js', '.jsx', '.json', '.jpg', '.css', '.scss', '.sass', '.ttf' ]
   },
   module: {
     rules: [
@@ -46,7 +46,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'images/[contenthash]-[name].[ext]'
+              name: 'assets/images/[contenthash]-[name].[ext]'
             }
           },
           'img-loader'
@@ -56,7 +56,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {
-          name: 'fonts/[folder]/[contenthash]-[name].[ext]'
+          name: 'assets/fonts/[folder]/[contenthash]-[name].[ext]'
         }
       }
     ]
