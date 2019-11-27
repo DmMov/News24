@@ -4,9 +4,9 @@
   "description": "News24 web app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js --progress",
-    "build": "webpack --config webpack.prod.js --progress",
-    "dev": "webpack --config webpack.dev.js --progress"
+    "start": "webpack-dev-server --open --config webpack/webpack.dev.js --progress",
+    "build": "webpack --config webpack/webpack.prod.js --progress",
+    "dev": "webpack --config webpack/webpack.dev.js --progress"
   },
   "author": "DmMov",
   "license": "MIT",

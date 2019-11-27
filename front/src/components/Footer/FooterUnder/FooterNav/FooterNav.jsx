@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'components/common/Link';
-import { FOOTER_LINKS } from 'data-export';
+import { FOOTER_LINKS } from 'data/index';
 
 import './FooterNav.sass';
 

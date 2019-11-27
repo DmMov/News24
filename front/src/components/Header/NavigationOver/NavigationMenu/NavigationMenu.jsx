@@ -1,5 +1,5 @@
 import React from 'react';
-import { NAV_LINKS } from 'data-export';
+import { NAV_LINKS } from 'data/index';
 import Link from 'components/common/Link';
 
 import './NavigationMenu.sass';

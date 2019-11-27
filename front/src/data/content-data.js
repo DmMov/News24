@@ -1,10 +1,10 @@
-import one from 'img/1';
-import two from 'img/2';
-import three from 'img/3';
-import four from 'img/4';
-import five from 'img/5';
-import six from 'img/6';
-import seven from 'img/7';
+import one from 'assets/images/1';
+import two from 'assets/images/2';
+import three from 'assets/images/3';
+import four from 'assets/images/4';
+import five from 'assets/images/5';
+import six from 'assets/images/6';
+import seven from 'assets/images/7';
 
 import uuid from 'uuid';
 import moment from 'moment';

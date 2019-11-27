@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Slider from './Slider';
-import { NEWS } from 'data-export';
+import { NEWS } from 'data/index';
 
 const SliderContainer = () => {
   const [slideIndex, setSlideIndex] = useState(0);

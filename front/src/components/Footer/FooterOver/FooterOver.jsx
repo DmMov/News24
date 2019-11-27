@@ -1,7 +1,7 @@
 import React from 'react';
 import SiteLogo from 'components/common/SiteLogo/SiteLogo';
 import ASBox from 'components/common/ASBox/ASBox';
-import { CATEGORIES } from 'data-export';
+import { CATEGORIES } from 'data/index';
 
 import './FooterOver.sass';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import img from 'img/24.png';
+import img from 'assets/images/24.png';
 
 import './SiteLogo.sass';
 

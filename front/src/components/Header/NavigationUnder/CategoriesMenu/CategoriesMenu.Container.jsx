@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import CategoriesMenu from './CategoriesMenu';
-import { CATEGORIES } from 'data-export';
+import { CATEGORIES } from 'data/index';
 import { ResizeSensor } from 'css-element-queries';
 
 const CategoriesMenuContainer = () => {
