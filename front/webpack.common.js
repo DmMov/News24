@@ -46,7 +46,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[contenthash]-[name].[ext]'
+              name: 'images/[contenthash]-[name].[ext]'
             }
           },
           'img-loader'
@@ -64,16 +64,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template:'src/index.html',
-      favicon: 'src/favicon.ico'
+      template:'public/index.html',
+      favicon: 'public/favicon.ico'
     }),
-    new MiniCssExtractPlugin({
+    new MiniCssExtractPlugin({ 
       filename: '[name].css'
     }),
-    new ImageminPlugin({
+    new ImageminPlugin({ 
       test: /\.(png|jpe?g|gif|svg)$/
     }),
-    new MomentLocalesPlugin({
+    new MomentLocalesPlugin({ 
       localesToKeep: ['uk-ua']
     })
   ]
