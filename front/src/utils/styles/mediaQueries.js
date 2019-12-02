@@ -6,4 +6,9 @@ export const mediaQueries = css`
       font-size: 14px;
     }
   }
+  @media (max-width: 1000px) {
+    html {
+      font-size: 12px;
+    }
+  }
 `;
