@@ -1,15 +1,14 @@
 import React from 'react';
+import ASBox from 'components/common/ASBox/ASBox';
+import Newsletter from './Sidebar/Newsletter/Newsletter';
+import NewsContainer from './News/News.container';
 
 import './Main.sass';
-import ASBox from 'components/common/ASBox/ASBox';
-import News from './News/News';
-import Newsletter from './Sidebar/Newsletter/Newsletter';
-import { NEWS } from 'data/content-data';
 
 const Main = () =>
   <ASBox>
     <main id="main">
-      <News news={NEWS}/>
+      <NewsContainer />
       <Newsletter/>
     </main>
   </ASBox>
