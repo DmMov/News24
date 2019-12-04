@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledCarousel, StyledCarouselWrapper } from './Carousel.style';
-import BitOfNewsContainer from '../Main/News/BitOfNews/BitOfNews.container';
+import BitOfNewsContainer from '../Main/News/NewsList/BitOfNews/BitOfNews.container';
 import { Container } from '../_styled/Container';
 import Dots from 'components/common/Dots/Dots';
 
 const CarouselView = ({ items, show, reference, style, itemsPerView, dots, jumpTo, activeIndex }) =>
-  <Container>
+  <div className="container">
     <StyledCarouselWrapper ref={reference}>
       <h1>популярні публікації</h1>
       <StyledCarousel style={style} itemsPerView={itemsPerView}>
@@ -15,6 +15,6 @@ const CarouselView = ({ items, show, reference, style, itemsPerView, dots, jumpT
       </StyledCarousel>
       <Dots jumpTo={jumpTo} dots={dots} activeIndex={activeIndex}/>
     </StyledCarouselWrapper>
-  </Container>
+  </div>
 
 export default CarouselView;

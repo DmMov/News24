@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Newsletter.sass';
+import './Newsletter.style';
 
-const Newsletter = () =>
+const NewsletterView = () =>
   <div id="subscription-wrap">
     <div className="subscription">
       <h3 className="sub-title">підписка</h3>
@@ -16,4 +16,4 @@ const Newsletter = () =>
     </div>
   </div>
 
-export default Newsletter;
+export default NewsletterView;

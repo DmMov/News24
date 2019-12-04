@@ -1,13 +1,11 @@
 import React from 'react';
-import BitOfNewsContainer from './BitOfNews/BitOfNews.container';
+import NewsListView from './NewsList/NewsList.view';
 
 import './News.sass';
 
-const NewsView = ({ news, show }) =>
+const NewsView = ({ ...props }) =>
   <div className="news-section">
-    <div className="news-wrap">
-      { news.map(bitOfNews => <BitOfNewsContainer key={bitOfNews.id} bitOfNews={bitOfNews} show={show}/>) }
-    </div>
+    <NewsListView {...props} />
   </div>
 
 export default NewsView;

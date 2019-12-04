@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { StyledBitOfNewsWrapper } from '../Main/News/BitOfNews/BitOfNews.style';
+import { StyledBitOfNewsWrapper } from '../Main/News/NewsList/BitOfNews/BitOfNews.style';
 import { ImageWrapper } from 'components/_styled/ImageWrapper';
 
 export const StyledCarouselWrapper = styled.div`
   overflow: hidden;
-  padding: 3rem 0 5rem;
+  padding: 3rem 0 0;
   .dots {
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 2rem;
+    justify-content: center;
   }
 
   h1 {

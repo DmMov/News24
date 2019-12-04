@@ -4,13 +4,13 @@ import { StyledBitInfo } from './BitInfo.style';
 import { FiberManualRecordRounded, EqualizerRounded, ArrowRightAltRounded, VisibilityOutlined } from '@material-ui/icons';
 
 const BitInfoView = ({ to, category, title, createdAt, views, text, showText, showViews, showBtn }) => 
-  <StyledBitInfo>
+  <StyledBitInfo className="bit-info">
     <RouterLink to={to.category} className="bit-category">{category}</RouterLink>
     <RouterLink to={to.post}>
       <h2 className="bit-title">{title}</h2>
     </RouterLink>
     <div className="bit-details">
-      <span>{createdAt}</span>
+      <span className="bit-created-at">{createdAt}</span>
       {showViews && <>
         <FiberManualRecordRounded className="dot-icon"/>
         <VisibilityOutlined className="stat-icon"/>

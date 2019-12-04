@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack/webpack.dev.js --progress",
     "build": "webpack --config webpack/webpack.prod.js --progress",
-    "dev": "webpack --config webpack/webpack.dev.js --progress"
+    "dev": "webpack --config webpack/webpack.dev.js --progress",
+    "local": "webpack-dev-server --open --config webpack/webpack.dev.js --host 192.168.0.105 --progress"
+
   },
   "author": "DmMov",
   "license": "MIT",

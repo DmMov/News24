@@ -1,8 +1,8 @@
 import React from 'react';
 import SiteLogo from 'components/common/SiteLogo/SiteLogo';
 import ASBox from 'components/common/ASBox/ASBox';
-import { CATEGORIES } from 'data/index';
-
+import { CATEGORIES, NEWS } from 'data/index';
+import NewsBarView from 'components/NewsBar/NewsBar.view';
 import './FooterOver.sass';
 
 const FooterOver = () =>
@@ -10,7 +10,7 @@ const FooterOver = () =>
     <ASBox>
       <div className="fo-content-box">
         <SiteLogo />
-        <div></div>
+        <NewsBarView news={NEWS.slice(0, 2)} title="нещодавні новини" />
         <div className="category-list">
           <h3 className="title">категорії</h3>
           <div className="categories-wrap">
