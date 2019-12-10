@@ -1,7 +1,18 @@
 #navigation-over
   background-color: #fff
+  .btn
+    display: none
+    background: none
+    color: currentColor
+    justify-self: start
   .no-content-wrap
     display: grid
     height: 56px
     grid-template-columns: 1fr auto
     
+@media (max-width: 700px)
+  #navigation-over
+    .btn
+      display: block
+    .navigation-menu
+      display: none

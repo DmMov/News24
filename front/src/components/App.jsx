@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Header from './Header/Header';
+import HeaderContainer from './Header/Header.container';
 import SliderContainer from './Slider/Slider.Container';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
@@ -14,7 +14,7 @@ const App = () =>
   <Router>
     <>
       <GlobalStyle />
-      <Header />
+      <HeaderContainer />
       <Route exact component={SliderContainer} path="/" />
       <Route exact component={CarouselContainer} path="/" />
       <Main />
