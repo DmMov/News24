@@ -3,23 +3,27 @@ import { Link as RouterLink } from 'react-router-dom';
 import { StyledBitInfo } from './BitInfo.style';
 import { FiberManualRecordRounded, EqualizerRounded, ArrowRightAltRounded, VisibilityOutlined } from '@material-ui/icons';
 
-const Views = ({ show, views }) => show &&
-  <p className="bit-views-box">
-    <FiberManualRecordRounded className="dot-icon"/>
-    <VisibilityOutlined className="stat-icon"/>
-    <span className="views-amount">{views}</span>
-  </p>
+const Views = ({ show, views }) => 
+  show ?
+    <p className="bit-views-box">
+      <FiberManualRecordRounded className="dot-icon"/>
+      <VisibilityOutlined className="stat-icon"/>
+      <span className="views-amount">{views}</span>
+    </p> : false
 
-const Text = ({ show, text }) => show &&
-  <p className="bit-text">
-    {text}
-  </p>
+const Text = ({ show, text }) => 
+  show ?
+    <p className="bit-text">
+      {text}
+    </p> : false
 
-const ReadMore = ({ show, to }) => show &&
-  <RouterLink to={to} className="read-more-link">
-    <span className="read-more-text">читати більше</span>
-    <ArrowRightAltRounded className="arrow-icon"/>
-  </RouterLink>
+const ReadMore = ({ show, to }) => 
+  show ?
+    <RouterLink to={to} className="read-more-link">
+      <span className="read-more-text">читати більше</span>
+      <ArrowRightAltRounded className="arrow-icon"/>
+    </RouterLink> : false
+
 
 const BitInfoView = ({ to, category, title, createdAt, views, text, showText, showViews, showBtn }) => 
   <StyledBitInfo className="bit-info">

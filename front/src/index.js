@@ -6,8 +6,7 @@ import { render } from 'react-dom';
 import(/* webpackChunkName: 'app' */ 'components/App')
   .then(({ default: App }) => 
     render(
-        <App />
-      , 
+      <App />, 
       document.getElementById('app')
     )
   );

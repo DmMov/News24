@@ -20,6 +20,18 @@ module.exports = {
     modules: ['node_modules/', 'src/'], 
     extensions: [ '.js', '.jsx', '.json', '.jpg', '.css', '.scss', '.sass', '.ttf' ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.(sa|sc|c)ss$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
+  },
   module: {
     rules: [
       {
