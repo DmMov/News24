@@ -7,20 +7,20 @@
   .side-menu-header
     padding: 1rem
     border-bottom: 1px solid rgba(0, 0, 0, .05)
-  .navigation-menu
-    .links-wrap
-      align-self: start
-      flex-direction: column
-      margin: 0
-      .link-wrap
-        width: 100%
-        padding: 0
-        .link
-          display: block
-          font-size: 1rem
-          padding: 1rem 2rem
-          color: rgba(0, 0, 0, .6)
-          border-left: 3px solid #fff
-          &:hover
-            border-color: $accent
-            color: $accent
+  & .links-wrap
+    align-self: start
+    flex-direction: column
+    margin: 0
+    .link-wrap
+      width: 100%
+      padding: 0 !important
+      .link
+        display: block
+        font-size: 1rem
+        padding: 1rem 2rem
+        color: rgba(0, 0, 0, .6) 
+        border-left: 3px solid #fff
+        text-transform: uppercase !important
+        &:hover
+          border-color: $accent
+          color: $accent

@@ -4,8 +4,8 @@ import NavigationUnder from './NavigationUnder/NavigationUnder';
 
 const Header = ({ open, ...props }) =>
   <header id="site-header">
-    <NavigationOver open={open.main} {...props} />
-    <NavigationUnder />
+    <NavigationOver open={open.nav} {...props} />
+    <NavigationUnder open={open.categories} {...props} />
   </header>
 
 export default Header;

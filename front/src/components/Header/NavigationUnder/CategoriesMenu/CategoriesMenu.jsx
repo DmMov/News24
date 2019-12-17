@@ -6,10 +6,10 @@ import CategoriesPopUp from './CategoriesPopUp/CategoriesPopUp';
 import { array, object } from 'prop-types';
 
 const CategoriesMenu = ({ categories, reference, categoriesToPopUp }) =>
-  <nav id="categories-menu" ref={reference}>
+  <nav className="categories-menu" ref={reference}>
     <ul className="links-wrap">
       { categories.map(({ id, title }) => <Link key={id} to={`/${title.en}`} label={title.ua} />) }
-      <CategoriesPopUp categoriesToPopUp={categoriesToPopUp}/>
+      {categoriesToPopUp && <CategoriesPopUp categoriesToPopUp={categoriesToPopUp}/>}
     </ul>
   </nav>
 

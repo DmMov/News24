@@ -1,8 +1,21 @@
 #navigation-under
   .nu-content-wrap
     display: flex
-    // grid-template-columns: auto 1fr auto
-    grid-gap: 20px
     height: 96px
+    .btn-wrap
+      flex-grow: 1
+      justify-content: end
+      display: none
+      .btn
+        background: none
+        color: currentColor
     .search-icon
       align-self: center
+
+@media (max-width: 500px)
+  #navigation-under
+    .nu-content-wrap
+      .btn-wrap
+        display: grid
+      .categories-menu
+        display: none

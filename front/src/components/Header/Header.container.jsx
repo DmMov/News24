@@ -3,16 +3,21 @@ import Header from './Header';
 
 const HeaderContainer = () => {
   const [isOpen, setIsOpen] = useState({
-    main: false,
-    tag: false
+    nav: false,
+    categories: false
   });
 
   const onSideMenuToggle = () => setIsOpen(v => ({
     ...v,
-    main: !v.main
+    nav: !v.nav
   }));
 
-  return <Header open={isOpen} onSideMenuToggle={onSideMenuToggle} />;
+  const onCategoryMenuToggle = () => setIsOpen(v => ({
+    ...v,
+    categories: !v.categories
+  }));
+
+  return <Header open={isOpen} onSideMenuToggle={onSideMenuToggle} onCategoryMenuToggle={onCategoryMenuToggle} />;
 };
 
 export default HeaderContainer; 
