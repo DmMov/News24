@@ -8,5 +8,4 @@ export const StyledBitOfNewsWrapper = styled.div`
 export const StyledBitOfNews = styled.div`
   display: grid;
   align-self: start;
-    
 `;

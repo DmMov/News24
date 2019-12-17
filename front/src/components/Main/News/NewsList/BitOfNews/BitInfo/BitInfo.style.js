@@ -42,7 +42,6 @@ export const StyledBitInfo = styled.div`
   }
   .bit-details {
     display: flex;
-    align-items: center;
     font-size: .875rem;
     padding: 1rem 0;
     color: rgba(0, 0, 0, .38);
@@ -50,8 +49,9 @@ export const StyledBitInfo = styled.div`
       font-size: .25rem;
       margin: 0 8px;
     }
-    .views-box {
+    .bit-views-box {
       display: flex;
+      align-items: center;
     }
     .stat-icon {
       font-size: 1rem;
