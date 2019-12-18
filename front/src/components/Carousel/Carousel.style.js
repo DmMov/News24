@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { StyledBitOfNewsWrapper } from '../Main/News/NewsList/BitOfNews/BitOfNews.style';
-import { ImageWrapper } from 'components/_styled/ImageWrapper';
 
 export const StyledCarouselWrapper = styled.div`
   overflow: hidden;
@@ -25,8 +24,8 @@ export const StyledCarousel = styled.div`
   ${StyledBitOfNewsWrapper} {
     min-width: ${({ itemsPerView }) => `calc(${100/itemsPerView}% - 2rem)`};
     margin: 0 1rem;
-    ${ImageWrapper} {
-      height: 180px;
+    .image-wrap {
+      height: 175px;
     }
     .bit-title {
       font-size: 1.125rem
