@@ -3,8 +3,8 @@ import BitInfoView from './BitInfo/BitInfo.view';
 
 import './BitOfNews.style';
 
-const BitOfNewsView = ({ bitOfNews, views, text, show, to }) =>
-  <div className="bit dg">
+const BitOfNewsView = ({ bitOfNews, views, text, show, to, style }) =>
+  <div className="bit dg" style={style}>
     <div className="bit-inner-wrap dg">
       <div className="image-wrap">  
         <img src={bitOfNews.img} />
