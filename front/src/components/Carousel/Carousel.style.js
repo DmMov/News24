@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { StyledBitOfNewsWrapper } from '../Main/News/NewsList/BitOfNews/BitOfNews.style';
 
 export const StyledCarouselWrapper = styled.div`
   overflow: hidden;
@@ -21,7 +20,7 @@ export const StyledCarousel = styled.div`
   margin: 0 -1rem;
   /* transform: ${({ index, itemsPerView }) => `translateX(-${index*(100/itemsPerView)*itemsPerView}%)`}; */
   transition: all 1s ease; 
-  ${StyledBitOfNewsWrapper} {
+  .bit {
     min-width: ${({ itemsPerView }) => `calc(${100/itemsPerView}% - 2rem)`};
     margin: 0 1rem;
     .image-wrap {
