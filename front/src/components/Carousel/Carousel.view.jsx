@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledCarousel, StyledCarouselWrapper } from './Carousel.style';
 import BitOfNewsContainer from '../Main/News/NewsList/BitOfNews/BitOfNews.container';
-import { Container } from '../_styled/Container';
 import Dots from 'components/common/Dots/Dots';
 
 const CarouselView = ({ items, show, reference, style, itemsPerView, dots, jumpTo, activeIndex }) =>
