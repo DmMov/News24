@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { StyledBitInfo } from './BitInfo.style';
-import { FiberManualRecordRounded, EqualizerRounded, ArrowRightAltRounded, VisibilityOutlined } from '@material-ui/icons';
+import { FiberManualRecordRounded, ArrowRightAltRounded, VisibilityOutlined } from '@material-ui/icons';
 
 const Views = ({ show, views }) => 
   show ?
@@ -26,7 +25,7 @@ const ReadMore = ({ show, to }) =>
 
 
 const BitInfoView = ({ to, category, title, createdAt, views, text, showText, showViews, showBtn }) => 
-  <StyledBitInfo className="bit-info">
+  <div className="bit-info">
     <RouterLink to={to.category} className="bit-category">{category}</RouterLink>
     <RouterLink to={to.post}>
       <h2 className="bit-title">{title}</h2>
@@ -37,6 +36,6 @@ const BitInfoView = ({ to, category, title, createdAt, views, text, showText, sh
     </div>
     <Text show={showText} text={text} />
     <ReadMore show={showBtn} to={to.post} />
-  </StyledBitInfo>
+  </div>
 
 export default BitInfoView;
