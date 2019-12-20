@@ -1,9 +1,12 @@
 import React from 'react';
+import { string, bool } from 'prop-types';
 import { Link as RouterLink, Route } from 'react-router-dom';
 import cx from 'classnames';
-import { string, bool } from 'prop-types';
 
-const Link = ({ to, exact, label }) =>
+// * Sass
+import './Link.style';
+
+export const Link = ({ to, exact, label }) =>
   <Route
     path={to}
     exact={exact}
@@ -21,5 +24,3 @@ Link.propTypes = {
   exact: bool,
   label: string
 }
-
-export default Link;
