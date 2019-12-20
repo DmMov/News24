@@ -1,16 +1,20 @@
 import React from 'react';
-import ASBox from 'components/common/ASBox/ASBox';
-import AuthBtns from './AuthStatusPanel/AuthBtns/AuthBtns';
 import { Menu } from '@material-ui/icons';
+
+// * Components
+import AuthBtns from './AuthStatusPanel/AuthBtns/AuthBtns';
 import SideMenuView from 'components/SideMenu/SideMenu.view';
-import { NAV_LINKS } from 'data/index';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
 
+// * Data
+import { NAV_LINKS } from 'data/index';
+
+// * Sass
 import './NavigationOver.sass';
 
 const NavigationOver = ({ onSideMenuToggle, open }) =>
   <section id="navigation-over">
-    <ASBox>
+    <div className="container">
       <div className="no-content-wrap">
         <SideMenuView open={open} onClose={onSideMenuToggle} >
           <NavigationMenu links={NAV_LINKS} />
@@ -21,7 +25,7 @@ const NavigationOver = ({ onSideMenuToggle, open }) =>
         <NavigationMenu links={NAV_LINKS} />
         <AuthBtns />
       </div>
-    </ASBox>
+    </div>
   </section>
 
 export default NavigationOver;

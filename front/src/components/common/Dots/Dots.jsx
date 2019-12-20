@@ -1,9 +1,8 @@
 import React from 'react';
+import { array, number, func } from 'prop-types';
 import Dot from './Dot/Dot';
-import ASBox from '../ASBox/ASBox';
 
 import './Dots.sass';  
-import { array, number, func } from 'prop-types';
 
 const Dots = ({ dots, jumpTo, activeIndex }) =>
   <div className="dots">

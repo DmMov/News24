@@ -1,20 +1,19 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import ASBox from 'components/common/ASBox/ASBox';
+
+// * Components
 import NewsContainer from './News/News.container';
 import SidebarView from './Sidebar/Sidebar.view';
 import { ContactFormView } from 'components/index';
 
-
+// * Sass
 import './Main.sass';
 
 const Main = () =>
-  <ASBox>
-    <main id="main">
-      <Route exact path="/" component={NewsContainer} />
-      <Route path="/contact" component={ContactFormView} />
-      <SidebarView />
-    </main>
-  </ASBox>
+  <main id="main" className="container">
+    <Route exact path="/" component={NewsContainer} />
+    <Route path="/contact" component={ContactFormView} />
+    <SidebarView />
+  </main>
 
 export default Main;
