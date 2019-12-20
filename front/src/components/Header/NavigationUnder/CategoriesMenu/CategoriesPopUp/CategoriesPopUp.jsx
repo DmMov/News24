@@ -1,9 +1,12 @@
 import React from 'react';
-import { MoreHorizOutlined } from '@material-ui/icons';
-import Link from 'components/common/Link';
-
-import './CategoriesPopUp.sass';
 import { array } from 'prop-types';
+import { MoreHorizOutlined } from '@material-ui/icons';
+
+// * Components
+import { Link } from 'components/index';
+
+// * Sass
+import './CategoriesPopUp.sass';
 
 const CategoriesPopUp = ({ categoriesToPopUp }) =>
   categoriesToPopUp.length != 0 &&

@@ -1,11 +1,18 @@
 import React from 'react';
-import SiteLogo from 'components/common/SiteLogo/SiteLogo';
 import { Search, MoreHorizOutlined } from '@material-ui/icons';
+
+// * Layouts
+import { Logo } from 'layouts/index';
+
+// * Components
 import CategoriesMenuContainer from './CategoriesMenu/CategoriesMenu.Container';
 import SideMenuView from 'components/SideMenu/SideMenu.view';
 import CategoriesMenu from './CategoriesMenu/CategoriesMenu';
+
+// * Data
 import { CATEGORIES } from 'data/index';
 
+// * Sass
 import './NavigationUnder.sass';
 
 const NavigationUnder = ({ onCategoryMenuToggle, open }) =>
@@ -15,7 +22,7 @@ const NavigationUnder = ({ onCategoryMenuToggle, open }) =>
         <SideMenuView onClose={onCategoryMenuToggle} open={open}>
           <CategoriesMenu categories={CATEGORIES} />
         </SideMenuView>
-        <SiteLogo />
+        <Logo />
         <div className="btn-wrap">
           <button className="btn" onClick={onCategoryMenuToggle}>
             <MoreHorizOutlined className="dots-icon" />

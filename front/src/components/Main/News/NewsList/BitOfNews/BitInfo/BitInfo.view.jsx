@@ -2,6 +2,7 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { FiberManualRecordRounded, ArrowRightAltRounded, VisibilityOutlined } from '@material-ui/icons';
 
+// * Sass
 import './BitInfo.style';
 
 const Views = ({ show, views }) => 
@@ -20,15 +21,15 @@ const Text = ({ show, text }) =>
 
 const ReadMore = ({ show, to }) => 
   show ?
-    <RouterLink to={to} className="read-more-link">
+    <RouterLink to={to} className="read-more-link link">
       <span className="read-more-text">читати більше</span>
       <ArrowRightAltRounded className="arrow-icon"/>
     </RouterLink> : false
 
 const BitInfoView = ({ to, category, title, createdAt, views, text, showText, showViews, showBtn }) => 
   <div className="bit-info">
-    <RouterLink to={to.category} className="bit-category">{category}</RouterLink>
-    <RouterLink to={to.post}>
+    <RouterLink to={to.category} className="bit-category link">{category}</RouterLink>
+    <RouterLink to={to.post} className="link">
       <h2 className="bit-title">{title}</h2>
     </RouterLink>
     <div className="bit-details">

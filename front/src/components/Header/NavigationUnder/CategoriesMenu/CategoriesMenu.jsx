@@ -1,9 +1,12 @@
 import React from 'react';
-import Link from 'components/common/Link';
-
-import './CategoriesMenu.sass';
-import CategoriesPopUp from './CategoriesPopUp/CategoriesPopUp';
 import { array, object } from 'prop-types';
+
+// * Components
+import { Link } from 'components/index';
+import CategoriesPopUp from './CategoriesPopUp/CategoriesPopUp';
+
+// * Sass
+import './CategoriesMenu.sass';
 
 const CategoriesMenu = ({ categories, reference, categoriesToPopUp }) =>
   <nav className="categories-menu" ref={reference}>

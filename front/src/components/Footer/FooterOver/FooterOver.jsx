@@ -1,14 +1,22 @@
 import React from 'react';
-import SiteLogo from 'components/common/SiteLogo/SiteLogo';
-import { CATEGORIES, NEWS } from 'data/index';
+
+// * Layouts
+import { Logo } from 'layouts/index';
+
+// * Components
 import NewsBarView from 'components/NewsBar/NewsBar.view';
+
+// * Data
+import { CATEGORIES, NEWS } from 'data/index';
+
+// * Sass
 import './FooterOver.sass';
 
 const FooterOver = () =>
   <div id="footer-over">
     <div className="container">
       <div className="fo-content-box">
-        <SiteLogo />
+        <Logo />
         <NewsBarView news={NEWS.slice(0, 2)} title="нещодавні новини" />
         <div className="category-list">
           <h3 className="title">категорії</h3>

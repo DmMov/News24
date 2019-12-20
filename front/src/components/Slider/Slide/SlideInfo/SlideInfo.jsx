@@ -2,6 +2,7 @@ import React from 'react';
 import { FiberManualRecord, EqualizerRounded } from '@material-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 
+// * Sass
 import './SlideInfo.sass';
 
 const SlideInfo = ({ to, category, title, author, createdAt, views }) => 
