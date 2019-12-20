@@ -1,11 +1,16 @@
 import React from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import Slide from './Slide/Slide';
-import Dots from 'components/common/Dots/Dots';
-import { NEWS } from 'data/index';
-import NewsBarView from 'components/NewsBar/NewsBar.view';
 import { object, number, array, func } from 'prop-types';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+// * Components
+import Slide from './Slide/Slide';
+import { Dots } from 'components/index';
+import NewsBarView from 'components/NewsBar/NewsBar.view';
+
+// * Data
+import { NEWS } from 'data/index';
+
+// * Sass
 import './Slider.sass';
 
 const Slider = ({ slide, index, dots, jumpTo }) =>

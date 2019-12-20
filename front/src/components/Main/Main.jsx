@@ -10,10 +10,12 @@ import { ContactFormView } from 'components/index';
 import './Main.sass';
 
 const Main = () =>
-  <main id="main" className="container">
-    <Route exact path="/" component={NewsContainer} />
-    <Route path="/contact" component={ContactFormView} />
-    <SidebarView />
-  </main>
+  <div className="container">
+    <main id="main">
+      <Route exact path="/" component={NewsContainer} />
+      <Route path="/contact" component={ContactFormView} />
+      <SidebarView />
+    </main>
+  </div>
 
 export default Main;

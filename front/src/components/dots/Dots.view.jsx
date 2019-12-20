@@ -1,10 +1,13 @@
 import React from 'react';
 import { array, number, func } from 'prop-types';
-import Dot from './Dot/Dot';
 
-import './Dots.sass';  
+// * Components
+import { Dot } from 'components/index';
 
-const Dots = ({ dots, jumpTo, activeIndex }) =>
+// * Sass
+import './Dots.style';  
+
+export const Dots = ({ dots, jumpTo, activeIndex }) =>
   <div className="dots">
     {dots.map((_, i)=> <Dot key={i} index={i} jumpTo={() => jumpTo(i)} isActive={i == activeIndex && true} />)}
   </div>
@@ -14,5 +17,3 @@ Dots.propTypes = {
   jumpTo: func,
   activeIndex: number
 }
-
-export default Dots; 

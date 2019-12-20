@@ -1,6 +1,6 @@
 import React from 'react';
 import BitOfNewsContainer from '../Main/News/NewsList/BitOfNews/BitOfNews.container';
-import Dots from 'components/common/Dots/Dots';
+import { Dots } from 'components/index';
 
 import './Carousel.style.sass';
 
