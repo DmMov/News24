@@ -10,12 +10,12 @@ import NewsBarView from 'components/NewsBar/NewsBar.view';
 import { CATEGORIES, NEWS } from 'data/index';
 
 // * Sass
-import './FooterOver.sass';
+import './FooterWidgets.style';
 
-const FooterOver = () =>
-  <div id="footer-over">
+export const FooterWidgets = () =>
+  <div className="footer-widgets">
     <div className="container">
-      <div className="fo-content-box">
+      <div className="widgets-wrap">
         <Logo />
         <NewsBarView news={NEWS.slice(0, 2)} title="нещодавні новини" />
         <div className="category-list">
@@ -27,5 +27,3 @@ const FooterOver = () =>
       </div>
     </div>
   </div>
-
-export default FooterOver;

@@ -3,15 +3,15 @@ import { Copyright } from '@material-ui/icons';
 import moment from 'moment';
 
 // * Components
-import FooterNav from './FooterNav/FooterNav';
+import { FooterNav } from 'components/index';
 
 // * Sass
-import './FooterUnder.sass';
+import './FooterInfo.style';
 
-const FooterUnder = () =>
-  <div id="footer-under">
+export const FooterInfo = () =>
+  <div className="footer-info">
     <div className="container">
-      <div className="fu-content-box">
+      <div className="info-wrap">
         <div className="copyright-box">
           <Copyright className="copy-icon" />
           <span className="copy-year">{moment().year()} </span>
@@ -21,5 +21,3 @@ const FooterUnder = () =>
       </div>
     </div>
   </div>
-
-export default FooterUnder;

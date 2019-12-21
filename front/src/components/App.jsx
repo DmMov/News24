@@ -1,12 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// * Components
 import HeaderContainer from './Header/Header.container';
 import SliderContainer from './Slider/Slider.Container';
 import Main from './Main/Main';
-import Footer from './Footer/Footer';
-import CarouselContainer from './Carousel/Carousel.container';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  CarouselContainer,
+  Footer
+} from 'components/index';
 
+// * Sass
 import './App.sass';
 
 const App = () =>

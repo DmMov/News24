@@ -4,3 +4,8 @@ export * from './dots/Dots.view';
 export * from './dot/Dot.view';
 export * from './link/Link.view';
 export * from './modal/Modal.container';
+export * from './footer/Footer.view';
+export * from './footer-info/FooterInfo.view';
+export * from './footer-nav/FooterNav.view';
+export * from './footer-widgets/FooterWidgets.view';
+export * from './carousel/Carousel.container';
