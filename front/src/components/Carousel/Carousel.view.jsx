@@ -1,7 +1,10 @@
 import React from 'react';
+
+// * Components
 import BitOfNewsContainer from '../Main/News/NewsList/BitOfNews/BitOfNews.container';
 import { Dots } from 'components/index';
 
+// * Sass
 import './Carousel.style.sass';
 
 export const Carousel = ({ items, show, reference, style, itemStyle, dots, jumpTo, activeIndex }) =>

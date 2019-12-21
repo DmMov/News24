@@ -1,10 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Carousel } from './Carousel.view';
-import { NEWS } from 'data/index';
 import { ResizeSensor } from 'css-element-queries';
+
+// * Components
+import { Carousel } from './Carousel.view';
+
+// * Data
+import { NEWS } from 'data/index';
+
+// * Hooks
 import { useIndex } from 'hooks/useIndex';
 
-const CarouselContainer = () => {
+export const CarouselContainer = () => {
   const [itemsPerView, setItemsPerView] = useState(4);
   const { index, jumpIndex } = useIndex(0, 12/itemsPerView - 1);
  
@@ -49,5 +55,3 @@ const CarouselContainer = () => {
     }}
   />
 };
-
-export default CarouselContainer;
