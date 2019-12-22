@@ -5,22 +5,24 @@ import { Search, MoreHorizOutlined } from '@material-ui/icons';
 import { Logo } from 'layouts/index';
 
 // * Components
-import CategoriesMenuContainer from './CategoriesMenu/CategoriesMenu.Container';
+import { 
+  CategoriesNav, 
+  CategoriesNavContainer 
+} from 'components/index';
 import SideMenuView from 'components/SideMenu/SideMenu.view';
-import CategoriesMenu from './CategoriesMenu/CategoriesMenu';
 
 // * Data
 import { CATEGORIES } from 'data/index';
 
 // * Sass
-import './NavigationUnder.sass';
+import './HeaderBottombar.style';
 
-const NavigationUnder = ({ onCategoryMenuToggle, open }) =>
-  <section id="navigation-under">
+export const HeaderBottombar = ({ onCategoryMenuToggle, open }) =>
+  <div className="header-bottombar">
     <div className="container">
-      <div className="nu-content-wrap">
+      <div className="bottombar">
         <SideMenuView onClose={onCategoryMenuToggle} open={open}>
-          <CategoriesMenu categories={CATEGORIES} />
+          <CategoriesNav categories={CATEGORIES} />
         </SideMenuView>
         <Logo />
         <div className="btn-wrap">
@@ -28,10 +30,8 @@ const NavigationUnder = ({ onCategoryMenuToggle, open }) =>
             <MoreHorizOutlined className="dots-icon" />
           </button>
         </div>
-        <CategoriesMenuContainer />
+        <CategoriesNavContainer />
         <Search className="search-icon" />
       </div>
     </div>
-  </section>
-
-export default NavigationUnder;
+  </div>

@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import Header from './Header';
 
-const HeaderContainer = () => {
+// * Components
+import { Header } from './Header.view';
+
+export const HeaderContainer = () => {
   const [isOpen, setIsOpen] = useState({
-    nav: false,
+    main: false,
     categories: false
   });
 
-  const onSideMenuToggle = () => setIsOpen(v => ({
+  const handleOpen = name => setIsOpen(v => ({
     ...v,
-    nav: !v.nav
+    [name]: !v.nav
   }));
 
-  const onCategoryMenuToggle = () => setIsOpen(v => ({
-    ...v,
-    categories: !v.categories
-  }));
-
-  return <Header open={isOpen} onSideMenuToggle={onSideMenuToggle} onCategoryMenuToggle={onCategoryMenuToggle} />;
+  return <Header 
+    open={isOpen} 
+    handleMainOpen={() => handleOpen('main')} 
+    handleCategoriesOpen={() => handleOpen('categories')} 
+  />;
 };
-
-export default HeaderContainer; 

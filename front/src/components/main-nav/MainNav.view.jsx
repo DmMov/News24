@@ -5,17 +5,15 @@ import { array } from 'prop-types';
 import { Link } from 'components/index';
 
 // * Sass
-import './NavigationMenu.sass';
+import './MainNav.style';
 
-const NavigationMenu = ({ links }) =>
-  <nav className="navigation-menu">
+export const MainNav = ({ links }) =>
+  <nav className="main-nav">
     <ul className="links-wrap">
       { links.map(l => <Link key={l.to} {...l} />) }
     </ul>
   </nav>
 
-NavigationMenu.propTypes = {
-  links: array,
+MainNav.propTypes = {
+  links: array
 }
-
-export default NavigationMenu;

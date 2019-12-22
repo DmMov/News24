@@ -9,3 +9,13 @@ export * from './footer-info/FooterInfo.view';
 export * from './footer-nav/FooterNav.view';
 export * from './footer-widgets/FooterWidgets.view';
 export * from './carousel/Carousel.container';
+export * from './header/Header.container';
+export * from './header-topbar/HeaderTopbar.view';
+export * from './header-bottombar/HeaderBottombar.view';
+export * from './auth-status-panel/AuthStatusPanel.view';
+export * from './auth-btns/AuthBtns.view';
+export * from './categories-nav/CategoriesNav.container';
+export * from './categories-nav/CategoriesNav.view';
+export * from './categories-pop-up/CategoriesPopUp.view';
+export * from './main-nav/MainNav.view';
+

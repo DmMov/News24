@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import CategoriesMenu from './CategoriesMenu';
-import { CATEGORIES } from 'data/index';
 import { ResizeSensor } from 'css-element-queries';
 
-const CategoriesMenuContainer = () => {
+// * Components
+import { CategoriesNav } from './CategoriesNav.view';
+import { CATEGORIES } from 'data/index';
+
+export const CategoriesNavContainer = () => {
   const [categories, setCategories] = useState(CATEGORIES);
   const [categoriesToMenu, setCategoriesToMenu] = useState(CATEGORIES);
   
@@ -35,7 +37,9 @@ const CategoriesMenuContainer = () => {
     new ResizeSensor(ref.current, () => isFitChecking(ref.current.children[0]));
   }, []);
 
-  return <CategoriesMenu categories={categoriesToMenu} categoriesToPopUp={categories.filter(v => !categoriesToMenu.includes(v))} reference={ref} />
+  return <CategoriesNav 
+    categories={categoriesToMenu} 
+    categoriesToPopUp={categories.filter(v => !categoriesToMenu.includes(v))} 
+    reference={ref} 
+  />
 };
-
-export default CategoriesMenuContainer;

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import './AuthBtns.sass';
+// * Sass
+import './AuthBtns.style';
 
-const AuthBtns = () =>
+export const AuthBtns = () =>
   <div id="auth-btns">
     <button className="btn">реєстрація</button>
     <button className="btn">вхід</button>
   </div>
-
-export default AuthBtns;

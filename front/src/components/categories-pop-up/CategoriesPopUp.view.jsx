@@ -6,9 +6,9 @@ import { MoreHorizOutlined } from '@material-ui/icons';
 import { Link } from 'components/index';
 
 // * Sass
-import './CategoriesPopUp.sass';
+import './CategoriesPopUp.style';
 
-const CategoriesPopUp = ({ categoriesToPopUp }) =>
+export const CategoriesPopUp = ({ categoriesToPopUp = [] }) =>
   categoriesToPopUp.length != 0 &&
   <div id="categories-pop-up">
     <button className="pop-up-btn">
@@ -23,12 +23,6 @@ const CategoriesPopUp = ({ categoriesToPopUp }) =>
     </nav>
   </div>
 
-CategoriesPopUp.defaultProps = {
-  categoriesToPopUp: []
-}
-
 CategoriesPopUp.propTypes = {
   categoriesToPopUp: array
 }
-
-export default CategoriesPopUp;
