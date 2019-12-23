@@ -1,14 +1,17 @@
 import React from 'react';
-import NewsletterView from './Newsletter/Newsletter.view';
+
+// * Components
+import { SubscriptionForm } from 'components/index';
 import NewsBarView from 'components/NewsBar/NewsBar.view';
+
+// * Data
 import { NEWS } from 'data/index';
 
+// * Sass
 import './Sidebar.style';
 
-const SidebarView = () =>
+export const Sidebar = () =>
   <div id="sidebar" className="dg grid-gap align-self-start">
-    <NewsletterView />
+    <SubscriptionForm />
     <NewsBarView news={NEWS.slice(0, 4)} title="нещодавні новини" />
   </div>
-
-export default SidebarView;

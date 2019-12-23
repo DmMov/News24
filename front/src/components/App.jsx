@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // * Components
 import SliderContainer from './Slider/Slider.Container';
-import Main from './Main/Main';
 import {
   HeaderContainer,
   CarouselContainer,
+  Main,
   Footer
 } from 'components/index';
 

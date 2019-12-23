@@ -4,8 +4,10 @@ import React from 'react';
 import { Logo } from 'layouts/index';
 
 // * Components
-import NewsletterView from '../Main/Sidebar/Newsletter/Newsletter.view';
-import { ModalContainer } from 'components/index';
+import { 
+  ModalContainer,
+  SubscriptionForm
+} from 'components/index';
 
 // * Sass
 import './SideMenu.style';
@@ -17,7 +19,7 @@ const SideMenuView = ({ children, open, onClose }) =>
         <Logo />
       </header>
       {children}
-      <NewsletterView />
+      <SubscriptionForm />
     </div>
   </ModalContainer>
 

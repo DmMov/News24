@@ -18,4 +18,12 @@ export * from './categories-nav/CategoriesNav.container';
 export * from './categories-nav/CategoriesNav.view';
 export * from './categories-pop-up/CategoriesPopUp.view';
 export * from './main-nav/MainNav.view';
+export * from './subscription-form/SubscriptionForm.view';
+export * from './main/Main.view';
+export * from './post-info/PostInfo.view';
+export * from './post-item/PostItem.container';
+export * from './post-list/PostList.view';
+export * from './posts-section/PostsSection.container';
+export * from './sidebar/Sidebar.view';
+
 
