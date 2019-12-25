@@ -4,7 +4,7 @@ import React from 'react';
 import { Logo } from 'layouts/index';
 
 // * Components
-import NewsBarView from 'components/NewsBar/NewsBar.view';
+import { PostsWidget } from 'components/index';
 
 // * Data
 import { CATEGORIES, NEWS } from 'data/index';
@@ -12,12 +12,21 @@ import { CATEGORIES, NEWS } from 'data/index';
 // * Sass
 import './FooterWidgets.style';
 
+const style = {
+  padding: 0
+}
+
 export const FooterWidgets = () =>
   <div className="footer-widgets">
     <div className="container">
       <div className="widgets-wrap">
         <Logo />
-        <NewsBarView news={NEWS.slice(0, 2)} title="нещодавні новини" />
+        <PostsWidget 
+          posts={NEWS.slice(0, 2)} 
+          title="нещодавні новини"
+          widgetThemeClass="dark"
+          style={style}
+        />
         <div className="category-list">
           <h3 className="title">категорії</h3>
           <div className="categories-wrap">

@@ -4,14 +4,23 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // * Components
 import Slide from './Slide/Slide';
-import { Dots } from 'components/index';
-import NewsBarView from 'components/NewsBar/NewsBar.view';
+import {
+  Dots,
+  PostsWidget
+} from 'components/index';
 
 // * Data
 import { NEWS } from 'data/index';
 
 // * Sass
 import './Slider.sass';
+
+const style = {
+  position: 'absolute',
+  top: '3rem',
+  right: '1rem',
+  zIndex: 10
+};
 
 const Slider = ({ slide, index, dots, jumpTo }) =>
   <div id="slider">
@@ -27,7 +36,12 @@ const Slider = ({ slide, index, dots, jumpTo }) =>
         </CSSTransition>
       </TransitionGroup>
       <div className="container bar-container abs-stretch">
-        <NewsBarView news={NEWS.slice(4, 8)} title="гарячі новини" />
+        <PostsWidget 
+          posts={NEWS.slice(4, 8)} 
+          title="гарячі новини"
+          widgetThemeClass="transparent-dark"
+          style={style}
+        />
       </div>
       <Dots dots={dots} jumpTo={jumpTo} activeIndex={index} />
     </div>

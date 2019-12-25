@@ -14,7 +14,7 @@ export const PostsSectionContainer = () => {
   }
 
   return <PostsSection
-    news={NEWS} 
+    posts={NEWS} 
     show={show} 
   />
 };

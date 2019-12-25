@@ -1,7 +1,23 @@
-.news-bar
+.posts-widget
+  max-width: 380px
   padding: 2rem
-  background-color: #fff
-  &-title
+  &.classic
+    background-color: #fff
+  &.transparent-dark
+    background-color: rgba(0, 0, 0, .5)
+    color: white
+    .post-item
+      background-color: inherit
+      .post-details
+        color: rgba(255, 255, 255, .38)
+  &.dark
+    color: #ffffff
+    background-color: #1a1a1c
+    .post-item
+      background-color: #1a1a1c
+      .post-created-at
+        color: rgba(255, 255, 255, .38)
+  & &-title
     margin-bottom: 2rem
     text-transform: capitalize
   .post-list
