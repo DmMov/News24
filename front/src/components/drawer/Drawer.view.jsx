@@ -4,23 +4,21 @@ import React from 'react';
 import { Logo } from 'layouts/index';
 
 // * Components
-import { 
+import {
   ModalContainer,
   SubscriptionForm
 } from 'components/index';
 
 // * Sass
-import './SideMenu.style';
+import './Drawer.style';
 
-const SideMenuView = ({ children, open, onClose }) =>
+export const Drawer = ({ children, open, onClose }) =>
   <ModalContainer open={open} onClose={onClose}>
-    <div className="side-menu">
-      <header className="side-menu-header">
+    <div className="drawer">
+      <header className="drawer-header">
         <Logo />
       </header>
       {children}
       <SubscriptionForm />
     </div>
   </ModalContainer>
-
-export default SideMenuView;

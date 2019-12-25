@@ -7,9 +7,9 @@ import { Logo } from 'layouts/index';
 // * Components
 import { 
   CategoriesNav, 
-  CategoriesNavContainer 
+  CategoriesNavContainer,
+  Drawer
 } from 'components/index';
-import SideMenuView from 'components/SideMenu/SideMenu.view';
 
 // * Data
 import { CATEGORIES } from 'data/index';
@@ -17,16 +17,16 @@ import { CATEGORIES } from 'data/index';
 // * Sass
 import './HeaderBottombar.style';
 
-export const HeaderBottombar = ({ onCategoryMenuToggle, open }) =>
+export const HeaderBottombar = ({ handleCategoriesOpen, open }) =>
   <div className="header-bottombar">
     <div className="container">
       <div className="bottombar">
-        <SideMenuView onClose={onCategoryMenuToggle} open={open}>
+        <Drawer onClose={handleCategoriesOpen} open={open}>
           <CategoriesNav categories={CATEGORIES} />
-        </SideMenuView>
+        </Drawer>
         <Logo />
         <div className="btn-wrap">
-          <button className="btn" onClick={onCategoryMenuToggle}>
+          <button className="btn" onClick={handleCategoriesOpen}>
             <MoreHorizOutlined className="dots-icon" />
           </button>
         </div>

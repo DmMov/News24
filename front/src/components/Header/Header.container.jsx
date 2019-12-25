@@ -11,7 +11,7 @@ export const HeaderContainer = () => {
 
   const handleOpen = name => setIsOpen(v => ({
     ...v,
-    [name]: !v.nav
+    [name]: !v[name]
   }));
 
   return <Header 
