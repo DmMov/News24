@@ -27,5 +27,7 @@ export * from './posts-section/PostsSection.container';
 export * from './sidebar/Sidebar.view';
 export * from './drawer/Drawer.view';
 export * from './posts-widget/PostsWidget.view';
+export * from './slider/Slider.Container';
+export * from './slide/Slide.view';
 
 

@@ -1,13 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import Slider from './Slider';
+
+// * Components
+import { Slider } from './Slider.view';
+
+// * Data
 import { NEWS } from 'data/index';
+
+// * Hooks
 import { useIndex } from 'hooks/useIndex';
 
-const SliderContainer = () => {
-  const sliderNews = NEWS.filter(v => v.important);
-  const { index, jumpIndex } = useIndex(0, sliderNews.length - 1, 5000);
+const featuredPosts = NEWS.filter(v => v.important);
 
-  return <Slider slide={sliderNews[index]} index={index} dots={sliderNews} jumpTo={jumpIndex} />
+export const SliderContainer = () => {
+  const { index, jumpIndex } = useIndex(0, featuredPosts.length - 1, 5000);
+  const [displayIndex, setDisplayIndex] = useState('01');
+
+  useEffect(() => {
+    setDisplayIndex(index + 1 < 10 ? `0${index + 1}` : index + 1);
+  }, [index])
+
+  return <Slider 
+    slide={featuredPosts[index]}
+    index={index}
+    displayIndex={displayIndex}
+    dots={featuredPosts}
+    jumpTo={jumpIndex}
+  />
 };
-
-export default SliderContainer;

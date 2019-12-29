@@ -3,8 +3,8 @@ import { object, number, array, func } from 'prop-types';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // * Components
-import Slide from './Slide/Slide';
 import {
+  Slide,
   Dots,
   PostsWidget
 } from 'components/index';
@@ -13,7 +13,7 @@ import {
 import { NEWS } from 'data/index';
 
 // * Sass
-import './Slider.sass';
+import './Slider.style';
 
 const style = {
   position: 'absolute',
@@ -22,7 +22,7 @@ const style = {
   zIndex: 10
 };
 
-const Slider = ({ slide, index, dots, jumpTo }) =>
+export const Slider = ({ slide, displayIndex, index, dots, jumpTo }) =>
   <div id="slider">
     <div className="container">
       <TransitionGroup className="slide-wrap">
@@ -32,7 +32,7 @@ const Slider = ({ slide, index, dots, jumpTo }) =>
           timeout={1000}
           classNames="fade"
         >
-          <Slide slide={slide} index={index} />
+          <Slide slide={slide} displayIndex={displayIndex} />
         </CSSTransition>
       </TransitionGroup>
       <div className="container bar-container abs-stretch">
@@ -43,7 +43,11 @@ const Slider = ({ slide, index, dots, jumpTo }) =>
           style={style}
         />
       </div>
-      <Dots dots={dots} jumpTo={jumpTo} activeIndex={index} />
+      <Dots
+        dots={dots}
+        jumpTo={jumpTo}
+        activeIndex={index}
+      />
     </div>
   </div>
 

@@ -1,21 +1,21 @@
+@import sass/mixins
 @import sass/vars
 
-.slide-index-box
+.index-box
   align-self: start
   justify-self: start
   display: flex
   align-items: center
-  .slide-index
-    width: 2.875rem
-    height: 2.875rem
-    background-color: $accent
+  .index-square
     display: flex
+    +square(2.5rem)
+    background-color: $accent
     align-items: center
     justify-content: center
     .index
-      font-weight: 700
-      font-size: 1.15rem
-  .slide-index-text
+      font-weight: 500
+      font-size: 1rem
+  .index-box-text
     padding-left: .5rem
     text-transform: capitalize
     font-weight: 500
